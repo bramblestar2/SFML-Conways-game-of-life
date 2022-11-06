@@ -32,7 +32,14 @@ void Grid::render(sf::RenderWindow* window)
 void Grid::update(const double dt)
 {
     if (!paused)
-        rules.updatePositions(getCells());
+    {
+        std::vector<sf::Vector2i> newCells = rules.updatePositions(getCells());
+
+        for (int i = 0; i < newCells.size(); i++)
+        {
+
+        }
+    }
 
     for (int i = 0; i < cells.size(); i++)
     {
@@ -55,7 +62,7 @@ void Grid::updateEvents(const sf::Event event)
     }
 }
 
-std::map<int, std::map<int, bool>> Grid::getCells()
+std::vector<sf::Vector2i> Grid::getCells()
 {
     positions.clear();
     for (int i = 0; i < cells.size(); i++)

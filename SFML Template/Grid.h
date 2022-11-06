@@ -19,12 +19,12 @@ public:
 	void update(const double dt);
 	void updateEvents(const sf::Event);
 
-	std::map<int, std::map<int,bool>> getCells();
+	std::vector<sf::Vector2i> getCells();
 
 private:
 	bool paused;
 
-	std::map<int, std::map<int, bool>> positions;
+	std::vector<sf::Vector2i> positions;
 
 	sf::Vector2u windowSize;
 	std::vector<Cell*> cells;
