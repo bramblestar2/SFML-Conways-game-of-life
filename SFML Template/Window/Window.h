@@ -1,5 +1,6 @@
 #pragma once
 #include <SFML/Graphics.hpp>
+#include "../Grid.h"
 
 class Window
 {
@@ -21,5 +22,9 @@ private:
 
 	sf::RenderWindow* window;
 	sf::Event event;
+
+	bool mouseInWindow;
+
+	Grid cellGrid;
 };
 
