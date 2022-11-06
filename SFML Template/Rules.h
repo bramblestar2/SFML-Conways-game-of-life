@@ -8,7 +8,7 @@ public:
 	Rules();
 	~Rules();
 
-	sf::Vector2i updatePositions(std::vector<sf::Vector2i>);
+	sf::Vector2i updatePositions(std::map<int, std::map<int, bool>>);
 private:
 
 

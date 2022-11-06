@@ -2,6 +2,7 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include <vector>
+#include <map>
 #include "Cell.h"
 #include "Rules.h"
 
@@ -18,12 +19,12 @@ public:
 	void update(const double dt);
 	void updateEvents(const sf::Event);
 
-	std::vector<sf::Vector2i> getCells();
+	std::map<int, std::map<int,bool>> getCells();
 
 private:
 	bool paused;
 
-	std::vector<sf::Vector2i> positions;
+	std::map<int, std::map<int, bool>> positions;
 
 	sf::Vector2u windowSize;
 	std::vector<Cell*> cells;

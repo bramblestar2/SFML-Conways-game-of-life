@@ -9,9 +9,8 @@ Rules::~Rules()
 {
 }
 
-sf::Vector2i Rules::updatePositions(std::vector<sf::Vector2i>)
+sf::Vector2i Rules::updatePositions(std::map<int, std::map<int, bool>> frontEnd)
 {
-	
 
 	return sf::Vector2i();
 }

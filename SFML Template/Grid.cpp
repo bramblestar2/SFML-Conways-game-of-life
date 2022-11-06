@@ -55,10 +55,10 @@ void Grid::updateEvents(const sf::Event event)
     }
 }
 
-std::vector<sf::Vector2i> Grid::getCells()
+std::map<int, std::map<int, bool>> Grid::getCells()
 {
     positions.clear();
     for (int i = 0; i < cells.size(); i++)
-        positions.push_back(cells.at(i)->get_position());
+        positions[cells.at(i)->get_position().x][cells.at(i)->get_position().y] = true;
     return positions;
 }
